@@ -44,7 +44,7 @@ body {
     display: flex;
     flex-direction: row;
     background-color: white;
-    margin: 20px 0;
+    margin: 5px 0;
 }
 
 .page-1 .cat-button img {
@@ -60,5 +60,6 @@ body {
 }
 
 .page-1 .cat-button div p {
-    text-align: center;
+    text-align: justify;
+    font-size: 2.3rem;
 }
