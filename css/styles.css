@@ -26,6 +26,8 @@ body {
 
 
 .page-1 {
+    position: relative;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,8 +36,29 @@ body {
     padding: 20px 0;
 }
 
-.page-1 button {
-    width: 80%;
-    background-color: transparent;
-    padding: 5px 10px;
+
+.page-1 .cat-button {
+    position: relative;
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin: 20px 0;
+}
+
+.page-1 .cat-button img {
+    width: 20%;
+}
+
+.page-1 .cat-button div {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.page-1 .cat-button div p {
+    text-align: center;
 }
