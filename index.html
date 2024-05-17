@@ -12,7 +12,14 @@
     </div>
 </body>
 <script type="text/javascript">
-    
+    $(document).ready(function() {
+        var temp;
+
+        $.getJSON('./data/data.json', function(data) {
+            temp = data.items;
+            console.log(temp);
+        });
+    });
  
     Telegram.WebApp.ready();
     Telegram.WebApp.MainButton.setText('Choose Color').show().onClick(function () {
