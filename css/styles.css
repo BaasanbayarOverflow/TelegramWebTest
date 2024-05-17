@@ -44,12 +44,12 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: white;
+    color: white;
     margin: 5px 0;
 }
 
 .page-1 .cat-button img {
-    width: 30%;
+    width: 27%;
 }
 
 .page-1 .cat-button div {
@@ -62,5 +62,5 @@ body {
 
 .page-1 .cat-button div p {
     text-align: justify;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
