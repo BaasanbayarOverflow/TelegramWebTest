@@ -139,21 +139,30 @@
                 </div>
             </div>
         </div>
+
+        <div class="page-2">
+            Hello world
+        </div>
      </div>
 </body>
 <script type="text/javascript">
+    var courses;
     $(document).ready(function() {
-        var temp;
-
         $.getJSON('./data/data.json', function(data) {
-            temp = data.items;
-            console.log(temp);
+            courses = data;
+            console.log(courses);
+        });
+    
+        $(".cat-button").on("click", function() {
+            let cat = $(this).find('p').text();
+            
+            $(this).parent().toggleClass('move-1');
         });
     });
  
     Telegram.WebApp.ready();
-    Telegram.WebApp.MainButton.setText('Choose Color').show().onClick(function () {
-        const data = JSON.stringify({hex: colorPicker.color.hexString, rgb: colorPicker.color.rgb});
+    Telegram.WebApp.MainButton.setText('Закрыть').show().onClick(function () {
+        const data = "HELLO WORLD";
         Telegram.WebApp.sendData(data);
         Telegram.WebApp.close();
     });

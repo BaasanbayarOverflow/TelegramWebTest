@@ -20,7 +20,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
+    transition: all 2.5s ease;
 }
 
 
@@ -31,8 +32,12 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid black;
     padding: 20px 0;
+    transition: all 2.5s ease;
+}
+
+.move-1 {
+    left: -100%;
 }
 
 
