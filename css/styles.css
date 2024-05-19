@@ -90,3 +90,34 @@ body {
     z-index: 5;
     background-color: cyan;
 }
+
+
+.page-2 .course-button {
+    position: relative;
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    margin: 5px 0;
+}
+
+
+.page-2 .course-button img {
+    width: 27%;
+}
+
+
+.page-2 .course-button div {
+    width: 65%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.page-2 .course-button div p {
+    text-align: justify;
+    font-size: 1.1rem;
+}
