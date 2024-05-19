@@ -235,7 +235,7 @@
             for (let i = 0; i < courses.length; i++) {
                 let course = courses[i];
                 if (course['category'].includes(cat)) {
-                    console.log(course['title']);
+                    console.log(course['link']);
 
                     $('#page-2').append(
                         `
@@ -260,7 +260,7 @@
                                                 <p>` + course['start'] + `</p>
                                             </div>
                                             <div class="info">
-                                                <a href="` + course['link'] + `">Подробнее...</a>
+                                                <a href="https://` + course['link'] + `">Подробнее...</a>
                                             </div>
                                         </div>
                                     </div>
@@ -270,6 +270,8 @@
                     )
                 }
             }
+
+            getDevice();
         });
 
         
