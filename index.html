@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="page-1">
+        <div class="page-1" id="page-1">
             <div class="cat-button">
                 <img src="./images/1.svg" alt="" srcset="">
                 <div>
@@ -140,8 +140,13 @@
             </div>
         </div>
 
-        <div class="page-2">
-            Hello world
+        <div class="page-2" id="page-2">
+            <div class="course-button">
+                <img src="./images/2.svg" alt="" srcset="">
+                <div>
+                    <p>Государственное и муниципальное управление. Закупки</p>
+                </div>
+            </div>
         </div>
      </div>
 </body>
@@ -150,13 +155,23 @@
     $(document).ready(function() {
         $.getJSON('./data/data.json', function(data) {
             courses = data;
-            console.log(courses);
         });
     
         $(".cat-button").on("click", function() {
-            let cat = $(this).find('p').text();
-            
             $(this).parent().toggleClass('move-1');
+            setTimeout(() => {
+                $(this).parent().css({
+                    "z-index": "-10",
+                    "display": "none",
+                })
+            }, 500);
+
+            let cat = $(this).find('p').text();
+            for (let i = 0; i < courses.length; i++) {
+                if (courses[i]['category'].includes(cat)) {
+                    console.log(courses[i]['title']);
+                }
+            }
         });
     });
  
