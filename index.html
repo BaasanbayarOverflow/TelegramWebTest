@@ -143,8 +143,26 @@
         <div class="page-2" id="page-2">
             <div class="course-button">
                 <img src="./images/2.svg" alt="" srcset="">
-                <div>
-                    <p>Государственное и муниципальное управление. Закупки</p>
+                <div class="description">
+                    <h3>Использование программ Project Expert и MS Project в разработке бизнес-планов и инвестиционных проектов</h3>
+                    <div class="details">
+                        <div class="info">
+                            <img src="./images/time.svg" alt="" srcset="">
+                            <p>2 недели</p>
+                        </div>
+                        <div class="info">
+                            <img src="./images/cost.svg" alt="" srcset="">
+                            <p>5000 руб.</p>
+                        </div>
+                        <div class="info">
+                            <img src="./images/date.svg" alt="" srcset="">
+                            <p>15 мая 2024</p>
+                        </div>
+                        <div class="info">
+                            <p>Подробнее</p>
+                            <img src="./images/more.svg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -155,6 +173,7 @@
     $(document).ready(function() {
         $.getJSON('./data/data.json', function(data) {
             courses = data;
+            console.log(courses[0])
         });
     
         $(".cat-button").on("click", function() {
