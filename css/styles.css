@@ -118,7 +118,7 @@ body {
 }
 
 
-.page-2 .course-button div h3 {
+.page-2 .course-button div h4 {
     text-align: center;
 }
 
@@ -138,5 +138,5 @@ body {
 }
 
 .page-2 .info img {
-    width: 40px;
+    width: 20px;
 }
