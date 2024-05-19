@@ -169,8 +169,28 @@
      </div>
 </body>
 <script type="text/javascript">
+    function getDevice() {
+        let isMobile = {
+            Android: function() {
+                return navigator.userAgent.match(/Android/i);
+            },
+            iOS: function() {
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            },
+        };
+
+        if (isMobile.iOS()) {
+            $('#page-2').text('IOS');
+        } else if (isMobile.Android()) {
+            $('#page-2').text('ANDROID');
+        }
+    }
+
+
     var courses;
     $(document).ready(function() {
+        getDevice();
+
         $.getJSON('./data/data.json', function(data) {
             courses = data;
             console.log(courses[0])
@@ -192,6 +212,8 @@
                 }
             }
         });
+
+        
     });
  
     Telegram.WebApp.ready();
