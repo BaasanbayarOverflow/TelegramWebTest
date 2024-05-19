@@ -144,23 +144,26 @@
             <div class="course-button">
                 <img src="./images/2.svg" alt="" srcset="">
                 <div class="description">
-                    <h4>Использование программ Project Expert и MS Project в разработке бизнес-планов и инвестиционных проектов</h4>
+                    <p class='title'>Использование программ Project Expert и MS Project в разработке бизнес-планов и инвестиционных проектов</p>
                     <div class="details">
-                        <div class="info">
-                            <img src="./images/time.svg" alt="" srcset="">
-                            <p>2 недели</p>
+                        <div class="ccdet">
+                            <div class="info">
+                                <img src="./images/time.svg" alt="" srcset="">
+                                <p>2 недели</p>
+                            </div>
+                            <div class="info">
+                                <img src="./images/cost.svg" alt="" srcset="">
+                                <p>5000 руб.</p>
+                            </div>
                         </div>
-                        <div class="info">
-                            <img src="./images/cost.svg" alt="" srcset="">
-                            <p>5000 руб.</p>
-                        </div>
-                        <div class="info">
-                            <img src="./images/date.svg" alt="" srcset="">
-                            <p>15 мая 2024</p>
-                        </div>
-                        <div class="info">
-                            <p>Подробнее</p>
-                            <img src="./images/more.svg" alt="">
+                        <div class="cfdet">
+                            <div class="info">
+                                <img src="./images/date.svg" alt="" srcset="">
+                                <p>15 мая 2024</p>
+                            </div>
+                            <div class="info">
+                                <a href="">Подробнее...</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -180,7 +183,20 @@
         };
 
         if (isMobile.iOS()) {
-            $('#page-2').text('IOS');
+            $('.description').css({
+                'font-size': '2.0rem',
+            });
+            $('.description').find('img').css({
+                'width': '15%',
+            });
+            $('.info').css({
+                'gap': '20px',
+                'padding-left': '25px',
+            });
+
+            $('.cat-button').find("p").css({
+                'font-size': '2.1rem',
+            });
         } else if (isMobile.Android()) {
             $('#page-2').text('ANDROID');
         }

@@ -38,7 +38,6 @@ body {
     transition: 0.4s ease-out;
     opacity: 1;
     z-index: 10;
-    background-color: rebeccapurple;
 }
 
 .move-1 {
@@ -69,6 +68,7 @@ body {
 }
 
 .page-1 .cat-button div p {
+    width: 100%;
     text-align: justify;
     font-size: 1.1rem;
 }
@@ -88,7 +88,7 @@ body {
     transition: 0.4s ease-out;
     opacity: 1;
     z-index: 5;
-    background-color: darkgreen;
+    background-color: #333;
 }
 
 
@@ -102,39 +102,57 @@ body {
     justify-content: space-between;
     color: white;
     margin: 5px 0;
+    border: 1px solid white;
+    border-radius: 40px;
+    padding: 30px;
 }
 
 
 .page-2 .course-button img {
-    width: 27%;
+    width: 20%;
 }
 
 
 .page-2 .course-button .description {
-    width: 65%;
+    width: 75%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 
-.page-2 .course-button div h4 {
+.page-2 .course-button div .title {
     text-align: justify;
 }
 
 
 .page-2 .course-button .description .details {
-    display: grid;
-    grid-template-columns: 200px 200px;
-    grid-row: auto auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 10px;
+}
+
+
+.page-2 .course-button .description .details .ccdet,
+.page-2 .course-button .description .details .cfdet {
+    display: flex;
+    flex-direction: row;
+    margin: 5px 0;
 }
 
 
 .page-2 .info {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+    width: 50%;
+}
+
+.page-2 .info a {
+    color: white;
 }
 
 .page-2 .info img {
