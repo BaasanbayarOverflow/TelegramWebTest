@@ -21,19 +21,19 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: all 2.5s ease;
 }
 
 
 .page-1 {
     position: relative;
+    left: 0;
     width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px 0;
-    transition: all 2.5s ease;
+    transition: 1s;
 }
 
 .move-1 {
