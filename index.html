@@ -233,8 +233,41 @@
 
             let cat = $(this).find('p').text();
             for (let i = 0; i < courses.length; i++) {
-                if (courses[i]['category'].includes(cat)) {
-                    console.log(courses[i]['title']);
+                let course = courses[i];
+                if (course['category'].includes(cat)) {
+                    console.log(course['title']);
+
+                    $('#page-2').append(
+                        `
+                            <div class="course-button">
+                                <img src="./images/2.svg" alt="" srcset="">
+                                <div class="description">
+                                    <p class='title'> ` + course['title'] + ` </p>
+                                    <div class="details">
+                                        <div class="ccdet">
+                                            <div class="info">
+                                                <img src="./images/time.svg" alt="" srcset="">
+                                                <p>` + course['duration'] + `</p>
+                                            </div>
+                                            <div class="info">
+                                                <img src="./images/cost.svg" alt="" srcset="">
+                                                <p>` + course['price'] + `</p>
+                                            </div>
+                                        </div>
+                                        <div class="cfdet">
+                                            <div class="info">
+                                                <img src="./images/date.svg" alt="" srcset="">
+                                                <p>` + course['start'] + `</p>
+                                            </div>
+                                            <div class="info">
+                                                <a href="` + course['link'] + `">Подробнее...</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `
+                    )
                 }
             }
         });
