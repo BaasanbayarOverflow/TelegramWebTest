@@ -206,9 +206,21 @@
         let course = value.innerHTML;
         fullCourse = course;
 
-        $(".page-3").css({
-            'z-index': '10',
+        $(".page-2").css({
+            'opacity': '0',
         });
+        setTimeout(() => {
+            $(".page-2").css({
+                "z-index": "-5",
+                "display": "none",
+            })
+        }, 1000);
+        setTimeout(() => {
+            $(".page-3").css({
+                'z-index': '10',
+                'opacity': '1',
+            });
+        }, 500);
     }
 
 
