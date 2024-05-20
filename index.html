@@ -370,8 +370,22 @@
  
     Telegram.WebApp.ready();
     Telegram.WebApp.MainButton.setText('Закрыть').show().onClick(function () {
+        let isCheck = 0;
+        if ($('#isb').is(':checked')) {
+            isCheck = 1;
+        }
+        
         const data = JSON.stringify({
             'fio': $('#fio').val(),
+            'fac': $('#fac').val(),
+            'lvl': $('#lvl').val(),
+            'grp': $('#grp').val(),
+            'tel': $('#tel').val(),
+            'npr': $('#npr').val(),
+            'crs': $('#crs').val(),
+            'frm': $('[name=frm]').val(),
+            'eml': $('#eml').val(),
+            'isb': isCheck,
         });
 
         Telegram.WebApp.sendData(data);
