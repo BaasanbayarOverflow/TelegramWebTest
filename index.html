@@ -141,37 +141,77 @@
         </div>
 
         <div class="page-2" id="page-2">
-            <div class="course-button">
-                <img src="./images/2.svg" alt="" srcset="">
-                <div class="description">
-                    <p class='title'>Использование программ Project Expert и MS Project в разработке бизнес-планов и инвестиционных проектов</p>
-                    <div class="details">
-                        <div class="ccdet">
-                            <div class="info">
-                                <img src="./images/time.svg" alt="" srcset="">
-                                <p>2 недели</p>
-                            </div>
-                            <div class="info">
-                                <img src="./images/cost.svg" alt="" srcset="">
-                                <p>5000 руб.</p>
-                            </div>
-                        </div>
-                        <div class="cfdet">
-                            <div class="info">
-                                <img src="./images/date.svg" alt="" srcset="">
-                                <p>15 мая 2024</p>
-                            </div>
-                            <div class="info">
-                                <a href="">Подробнее...</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            
+        </div>
+
+        <div class="page-3" id="page-3">
+            <div class="q_fio">
+                <label for="fio">ФИО</label>
+                <input type="text" name="fio" id="fio" required>
+            </div>
+            <div class="q_fio">
+                <label for="fac">Факультет</label>
+                <select name="fac" id="fac" required>
+                    <option value="Бизнес - школа ма"></option>
+                </select>
+            </div>
+            <div class="q_fio">
+                <label for="lvl">Курс</label>
+                <select name="lvl" id="lvl" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="Магистратура">Магистратура</option>
+                    <option value="Аспирантура">Аспирантура</option>
+                </select>
+            </div>
+            <div class="q_fio">
+                <label for="grp">Группа (полностью)</label>
+                <input type="text" name="grp" id="grp" placeholder="00.00А-АА00/00а">
+            </div>
+            <div class="q_fio">
+                <label for="tel">Телефон</label>
+                <input type="text" name="tel" id="tel">
+            </div>
+            <div class="q_fio">
+                <label for="npr">Направление обучение</label>
+                <input type="text" name="npr" id="npr" disabled>
+            </div>
+            <div class="q_fio">
+                <label for="crs">Выберите программу из направления</label>
+                <input type="text" name="crs" id="crs" disabled>
+            </div>
+            <div class="q_fio">
+                <label for="frm">Выберите формат обучения</label>
+                <input type="radio" name="frm" id="frm" value="">
+            </div>
+            <div class="q_fio">
+                <label for="eml">Электронная почта</label>
+                <input type="email" name="eml" id="eml">
+            </div>
+            <div class="q_fio">
+                <input type="checkbox" name="" id="">
             </div>
         </div>
      </div>
 </body>
 <script type="text/javascript">
+    var fullCategory = "";
+    var fullCourse = "";
+
+
+    function getCourse(value) {
+        let course = value.innerHTML;
+        fullCourse = course;
+
+        $(".page-3").css({
+            'z-index': '10',
+        });
+    }
+
+
     function getDevice() {
         let isMobile = {
             Android: function() {
@@ -219,9 +259,9 @@
 
         $.getJSON('./data/data.json', function(data) {
             courses = data;
-            console.log(courses[0])
         });
-    
+
+
         $(".cat-button").on("click", function() {
             $(this).parent().toggleClass('move-1');
             setTimeout(() => {
@@ -231,18 +271,23 @@
                 })
             }, 500);
 
+            setTimeout(() => {
+                $(".page-2").css({
+                    "opacity": "1",
+                })
+            }, 400);
+
             let cat = $(this).find('p').text();
+            fullCategory = cat;
             for (let i = 0; i < courses.length; i++) {
                 let course = courses[i];
                 if (course['category'].includes(cat)) {
-                    console.log(course['link']);
-
                     $('#page-2').append(
                         `
                             <div class="course-button">
                                 <img src="./images/2.svg" alt="" srcset="">
                                 <div class="description">
-                                    <p class='title'> ` + course['title'] + ` </p>
+                                    <p class='title' onclick="getCourse(this)"> ` + course['title'] + ` </p>
                                     <div class="details">
                                         <div class="ccdet">
                                             <div class="info">

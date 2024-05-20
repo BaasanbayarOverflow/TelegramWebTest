@@ -10,6 +10,7 @@ body {
     width: 100%;
     min-height: 100vh;
     display: block;
+    background-color: rgb(36, 36, 36);
 }
 
 
@@ -85,10 +86,9 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px 30px;
-    transition: 0.4s ease-out;
-    opacity: 1;
+    transition: 0.5s ease-out;
+    opacity: 0;
     z-index: 5;
-    background-color: #333;
 }
 
 
@@ -123,6 +123,7 @@ body {
 
 .page-2 .course-button div .title {
     text-align: justify;
+    text-decoration: underline;
 }
 
 
@@ -157,4 +158,35 @@ body {
 
 .page-2 .info img {
     width: 20px;
+}
+
+
+.page-3 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    transition: 0.4s ease-out;
+    opacity: 1;
+    z-index: 1;
+    background-color: #333;
+    border: 5px solid white;
+    color: white;
+}
+
+
+.page-3 .q_fio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: aqua;
 }
