@@ -358,7 +358,10 @@
  
     Telegram.WebApp.ready();
     Telegram.WebApp.MainButton.setText('Закрыть').show().onClick(function () {
-        const data = "HELLO WORLD";
+        const data = JSON.stringify({
+            'fio': $('#fio').val(),
+        });
+
         Telegram.WebApp.sendData(data);
         Telegram.WebApp.close();
     });

@@ -189,3 +189,7 @@ body {
     width: 100%;
     padding: 10px 20px;
 }
+
+.page-3 .q_fio input {
+    width: 100%;
+}
