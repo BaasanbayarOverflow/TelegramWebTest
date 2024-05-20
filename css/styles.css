@@ -192,4 +192,21 @@ body {
 
 .page-3 .q_fio input {
     width: 100%;
+    color: white;
+}
+
+.page-3 .q_fio select {
+    width: 100%;
+}
+
+.page-3 .q_fio div {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.page-3 .q_fio div input {
+    width: 10%;
 }
