@@ -177,11 +177,11 @@
             </div>
             <div class="q_fio">
                 <label for="npr">Направление обучение</label>
-                <input type="text" name="npr" id="npr" disabled>
+                <input type="text" name="npr" id="npr" readonly>
             </div>
             <div class="q_fio">
                 <label for="crs">Выберите программу из направления</label>
-                <input type="text" name="crs" id="crs" disabled>
+                <input type="text" name="crs" id="crs" readonly>
             </div>
             <div class="q_fio">
                 <label for="frm">Выберите формат обучения</label>
@@ -205,6 +205,9 @@
     function getCourse(value) {
         let course = value.innerHTML;
         fullCourse = course;
+
+        $('#npr').val(fullCategory);
+        $('#crs').val(fullCourse);
 
         $(".page-2").css({
             'opacity': '0',
